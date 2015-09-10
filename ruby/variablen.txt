@@ -5,5 +5,7 @@ Variablenname = 10				#Definition von Variablenname und den Inhalt als FIXNUM (I
 
 Variablenname = 10.2			#Definition von Variablenname und den Inhalt als FLOAT
 
+test
+
 
 
