@@ -1,7 +1,0 @@
-Die Programmiersprache RUBY ist streng Klassen/Objekt - orientiert. Das bedeutet, dass eine Variable vom Datentyp INTEGER ein Objekt der Klasse FIXNUM ist, bzw. eine Variable vom Datentyp String ein Objekt der Klasse String.
-Die Klassen bieten für die Objekte Methoden an.
-
-var = "Teststring"
-
-var.class
-	die Methode class auf das Objekt var angewandt gibt die Klasse des Objektes aus.
