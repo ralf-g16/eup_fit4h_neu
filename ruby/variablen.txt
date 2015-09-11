@@ -8,3 +8,4 @@ Variablenname = 10.2			#Definition von Variablenname und den Inhalt als FLOAT
 
 
 
+
