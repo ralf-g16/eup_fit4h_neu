@@ -43,8 +43,6 @@ class Player
 	end
 end
 
-#??? -> initialize funktioniert nicht für Player 2 Gregor, es kommt nur die ID
-
 #-----------------------
 
 #f
@@ -126,3 +124,30 @@ player1 = Player.new("Alf",90)
 player2 = Player.new("Ulf")
 players = "\t" + player1.say_hello + "\n\t" + player2.say_hello
 puts players
+
+#ODER RICHTIGER:
+
+class Player1
+
+
+	def initialize(name,health=80)
+		@name = name
+		@health = health
+	end
+	def to_s
+		"Ich bin #{@name} und habe einen Highscore von #{@health}."
+	end
+	def high
+		@health = @health +100
+	end
+	def low
+		@health = @health -60
+	end
+end
+spieler1 = Player1.new("Hugo",40)
+spieler2 = Player1.new("Ulla")
+spieler1.low
+puts spieler1.to_s
+spieler2.high
+puts spieler2.to_s
+puts spieler1.title
