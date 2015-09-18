@@ -3,7 +3,9 @@ class Film
 		@title = title
 		@imbd = imbd
 	end
-	attr_reader :title
+	# attr_reader :title
+	# attr_writer :title
+	attr_accessor :title
 	def to_s
 		"Der Film #{@title} hat einen Highscore von #{@imbd}."
 	end
@@ -19,12 +21,21 @@ class Film
 end
 
 film1 = Film.new("Hulk",1)
-puts film1.to_s
+puts film1.to_s	
 film1.high
 puts film1.to_s
 
 puts film1.title
 
 film1.title = "Juhu"
-puts title
+puts film1
 
+movie1 = Film.new("Olga",2)
+movie2 = Film.new("Johannes",-3)
+movie3 = Film.new("Johann",344)
+
+movies = [movie1,movie2,movie3]
+movies.each do |movie|
+	movie.high
+	puts movie
+end
