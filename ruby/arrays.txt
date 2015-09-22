@@ -10,6 +10,8 @@ Definition:
 	Methoden:
 		variable.size 							#gibt Anzahl der Elemente
 		variable.pop								#entfernt letztes Element
+		variable.pop(3)							#löscht den Eintrag an Vierter Stelle
+		variable.delete('Inhalt')		#löscht das Element Inhalt
 		variabe.empty? 							#Array leer?
 		varibale.include?('zwei')		#Element enthalten
 
