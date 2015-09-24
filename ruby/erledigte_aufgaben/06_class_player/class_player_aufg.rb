@@ -12,11 +12,11 @@ class Player
 	"Ich bin #{@name} mit einem Wert von #{@health}."
 	end	
 	def w00t
-		@health = @health +10
+		@health += 10
 		"#{@name} got w00ted to #{@health}."
 	end
 	def blam
-		@health = @health -10
+		@health -= 10
 		"#{@name} got blamed to #{@health}."
 		end	
 end

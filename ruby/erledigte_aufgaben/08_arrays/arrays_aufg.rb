@@ -64,3 +64,4 @@ zahl.times do
 	puts player[counter]
 	counter = counter + 1
 end
+

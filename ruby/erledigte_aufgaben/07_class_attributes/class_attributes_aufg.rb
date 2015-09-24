@@ -3,12 +3,13 @@ class Player
 	def initialize(name,health=100)
 		@name = name
 		@health = health
-		@score = @health + @name.size
 	end
 
 	attr_reader :health
 	attr_writer :health
-
+	def score
+		@score = @health + @name.size
+	end
 	def say_hello
 	"Ich bin #{@name} mit einem Wert von #{@health}."
 	end
@@ -32,3 +33,16 @@ puts player3.w00t
 puts player2.blam
 puts player3
 puts player1.health
+puts player2.score
+
+
+play = [player1, player2, player3]
+play.each do |var|
+	var.blam
+	puts var
+end
+
+play.size.times do |i|
+	puts i.to_s
+	puts play[i]
+end
