@@ -9,7 +9,7 @@ class Game
 	end
 	def play
 		count = @players.size
-		puts "There are #{count} players in Knuckleheads"
+		puts "There are #{count} players in #{@title}"
 		@players.each do |player|
 			puts player
 		end
@@ -41,7 +41,7 @@ class Player
 	end
 
 	def to_s
-	"Ich bin #{@name} mit einem Wert von #{@health} und habe einen Score von: #{score}."
+	"I'm #{@name} with a health of #{@health} and a score of #{score}."
 	end
 
 	def score
