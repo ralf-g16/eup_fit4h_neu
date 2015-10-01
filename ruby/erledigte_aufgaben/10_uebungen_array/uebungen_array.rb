@@ -6,6 +6,12 @@
 # #------------------------------------------------------------------------------------
 # #puts zahlen.join
 # zahlen_v2.size.times { |i| puts zahlen[i] }
+# 
+# zahlen.each do |z|
+#		puts z.to_s
+#	end
+#	zahlen.each {|z|puts z.to_s}
+#
 # #b 
 # #------------------------------------------------------------------------------------
 # counter = 0
@@ -16,6 +22,11 @@
 
 # #oder
 # zahlen_v2.size.times { |i| puts "Index: #{i} - Wert: #{zahlen_v2[i]}" }
+
+# #oder
+# zahlen.each_with_index do |z,i|
+# 	puts "Index: #{i} -  Wert: #{z}"
+# end
 
 #c 
 #------------------------------------------------------------------------------------
@@ -34,14 +45,23 @@
 # 	counter = counter + 1
 # end
 
+# #oder
+	my_array = (15..20).to_a
+	my_hash = Hash.new
+	my_array.each do |variable|
+		my_hash[variable] = rand(100..200)
+	end
+	puts my_hash
+
 # #d
 # #-----------------------------------------------------------------------------------
+# 
+# zahlen = (15..20).to_a
 # zahlen.size.times { |i| b = { zahlen[i] => rand(100) + 100 }; b.each { |key, value| puts "Index: #{key} - Wert: #{value}" } }
 
-# #oder
+# # #oder
 
 # zahlen_v4 = (15..20).to_a
-# c = {}
 # counter = 0
 # zahlen_v4.size.times do 
 # 	b = Hash[zahlen_v4[counter], rand(100)+100]
@@ -49,6 +69,11 @@
 # 	counter = counter + 1
 # end
 
+# # oder
+
+my_hash.each do |mykey, myval|
+	puts "Index: #{mykey} - Wert: #{myval}"
+end
 # #e
 # #-----------------------------------------------------------------------------------
 
@@ -65,6 +90,15 @@
 # 	counter = counter + 1	
 # end
 
+# #oder
+
+my_hash.each do |mykey2, myval2|
+	if myval2 > 150
+		puts "WOW: Index: #{mykey2} - Wert: #{myval2}"
+	else
+	 puts "Index: #{mykey2} - Wert: #{myval2}"
+	end	
+end
 #f
 #-----------------------------------------------------------------------------------
 
@@ -78,23 +112,47 @@
 # 	counter = counter + 1
 # end
 
+# #oder
+
+sec_array = Array.new
+my_array.each do |val|
+	sec_array << val * val
+end
+puts sec_array
 # #g
 #-----------------------------------------------------------------------------------
 
-zahlen_v7 = (15..20).to_a
-f = {}
-square_v2 = Array.new
-counter = 0
-zahlen_v7.size.times do 
-	g = Hash[zahlen_v7[counter], rand(100)+100]
-	g.each { |key,value| puts "Index: #{key} - Wert: #{value}"; square_v2 << value * value; puts "#{square_v2[counter]}" }
-	counter = counter + 1
-end
+# zahlen_v7 = (15..20).to_a
+# f = {}
+# square_v2 = Array.new
+# counter = 0
+# zahlen_v7.size.times do 
+# 	g = Hash[zahlen_v7[counter], rand(100)+100]
+# 	g.each { |key,value| puts "Index: #{key} - Wert: #{value}"; square_v2 << value * value; puts "#{square_v2[counter]}" }
+# 	counter = counter + 1
+# end
 
-square_v3 = Array.new
-counter = 0
-square_v2.size.times do 
-	square_v3 = Hash[square_v2[counter], rand(100)+100]
-	square_v3.each { |key,value| puts "Index: #{key} - Wert: #{value}";  puts square_v3 }
-	counter = counter + 1
+# square_v3 = Array.new
+# counter = 0
+# square_v2.size.times do 
+# 	square_v3 = Hash[square_v2[counter], rand(100)+100]
+# 	square_v3.each { |key,value| puts "Index: #{key} - Wert: #{value}";  puts square_v3 }
+# 	counter = counter + 1
+# end
+
+# #oder
+
+sec_hash = Hash.new
+my_array.each do |z|
+	sec_hash[z] = z * z
 end
+puts sec_hash
+
+
+
+
+
+
+#---------------------------------------------------------------------------------
+#Zusatz Zahlen im Array und im Hash:
+#a
