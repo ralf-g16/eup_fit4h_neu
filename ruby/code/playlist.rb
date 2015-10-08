@@ -1,45 +1,13 @@
-class Playlist
-	def initialize(name)
-		@name = name
-		@movies = []
-	end
+require_relative 'class_playlist'
+require_relative 'class_movie'
 
-	def add_movie(movie)
-		@movies << movie
-	end
-	def play
-		puts "#{@name}'s PLAYLIST"
-		@movies.each do |movie|
-			puts movie
-		end
-	end
-	def to_s
-		@movies.size.to_s
-	end
-end
-
-class Movie
-	attr_accessor :title
-	# attr_reader :title
-	# attr_writer :title
-	def initialize(ptitle, prank=0)
-		@title = ptitle
-		@rank = prank
-	end
-	def thumbs_up
-		@rank += 1
-	end
-	def thumbs_down
-		@rank -= 1
-	end
-	def to_s
-		"#{@title} hat ein Ranking von #{@rank}"
-	end
-end
 
 movie1 = Movie.new('Fringe - Grenzfälle des FBI',7)
+puts movie1.status
 movie2 = Movie.new('The Walking Dead',10)
+puts movie2.status
 movie3 = Movie.new('Black is the new Orange',8)
+puts movie3.status
 pl = Playlist.new("Horror")
 pl.add_movie(movie1)
 pl.add_movie(movie2)
