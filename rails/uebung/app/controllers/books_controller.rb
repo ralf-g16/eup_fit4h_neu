@@ -32,7 +32,7 @@ def create
 	redirect_to book_path(@book.id)
 end
 
-def neu
+def new
 	@book = Book.new
 end
 
