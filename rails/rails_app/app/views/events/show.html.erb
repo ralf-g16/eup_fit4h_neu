@@ -1,6 +1,12 @@
 <h1><%= @event.name %></h1>
 
-<div class="callout">
+<div class="panel">
+	<div class="row">
+		<div class="medium-3 columns"><%= image_for(@event) %></div>
+		<div class="medium-9 columns"><%= @event.descrption %></div>
+	</div>
+</div>
+<div class="panel">
 	<div class="row">
 		<div class="medium-2 columns">Beschreibung</div>
 		<div class="medium-10 columns"> <%= @event.descrption %></div>

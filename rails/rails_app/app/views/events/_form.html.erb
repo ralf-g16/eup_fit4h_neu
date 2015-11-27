@@ -22,7 +22,16 @@
 	<div class="medium-10 columns"><%= f.text_area :descrption %></div>
 </div>
 <div class="row">
+	<div class="medium-2 columns"><%= f.label :image_file %></div>
+	<div class="medium-10 columns"><%= f.text_field :image_file, size: 30, placeholder: "Gif, jpg, png Dateiname" %></div>
+</div>
+<div class="row">
+<div class="medium-2 columns"><%= f.label :capacity %></div>
+	<div class="medium-10 columns"><%= f.datetime_field :capacity %></div>
+</div>
+<div class="row">
 	<div class="medium-2 columns"><%= f.submit %></div>
 	<div class="medium-10 columns">&nbsp;</div>
 </div>
+
 <% end %>
