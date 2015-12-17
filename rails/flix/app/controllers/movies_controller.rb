@@ -14,22 +14,32 @@ class MoviesController < ApplicationController
 
 	def destroy
 		@movie = Movie.find(params[:id])
-		@movie.destroy
-		redirect_to movies_url
+			if @movie.destroy
+				flash[:notice] = "Movie successfully deleted."
+				redirect_to movies_url
+			else
+				render "show"
+			end
 	end
 
 	def update
 		@movie = Movie.find(params[:id])
-		permitted_params = movie_params
-		@movie.update(permitted_params)
-		redirect_to movie_path(@movie.id)
+			if @movie.update(movie_params)
+				flash[:notice] = "Movie successfully updated."
+				redirect_to movie_path(@movie.id)
+			else
+				render "edit"
+			end
 	end
 
 	def create
-		permitted_params = movie_params
-		@movie = Movie.new(permitted_params)
-		@movie.save
-		redirect_to movie_path(@movie.id)
+		@movie = Movie.new(movie_params)
+			if @movie.save
+				flash[:notice] = "Movie successfully created."
+				redirect_to movie_path(@movie.id)
+			else
+				render "new"
+			end
 		
 	end
 

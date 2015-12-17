@@ -1,4 +1,15 @@
 <%= form_for(@movie) do |f| %>
+
+<% if (@movie.errors.any?) %>
+<div class="panel">
+  <ul>
+    <% @movie.errors.full_messages.each do |message| %>
+    <li><%= message %> </li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
 <div class="row">
   <div class="large-5 columns"><%= f.label :title %></div>
   <div class="large-1 columns"><!-- ... --></div>

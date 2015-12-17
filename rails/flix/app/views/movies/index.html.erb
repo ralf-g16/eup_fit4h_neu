@@ -1,5 +1,5 @@
 <h1>Movies</h1>
-
+<p><%= flash[:notice] %></p>
 <p>Es <%= @movies.count == 1 ? " ist " : " sind " %> <%= "#{pluralize(@movies.count, "Movie")}" %> vorhanden.</p>
 <p> <%= link_to "Neuen Eintrag erstellen", new_movie_path %> </p>
 <table>
@@ -28,6 +28,3 @@
 		</tr>
 	<% end %>
 </table>
-<!-- 
-Movie.create([{title: "Spiderman", descrption: "juhu", website:"URL" , rating: "3", release: "2001-10-04", pledging: ""}, {title: "Superman", descrption: "juhu2", website:"URL-2" , rating: "4", release: "2006-12-30", pledging: ""}, {title: "Hulk", descrption: "juhu3", website:"URL3" , rating: "7", release: "1997-08-27", pledging: ""}])
--->

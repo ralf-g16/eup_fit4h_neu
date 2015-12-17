@@ -1,8 +1,8 @@
 module ApplicationHelper
 
 	def format_price(event)
-		if event.price.free?
-			"Free"
+		if event.free?
+			content_tag(:strong, "Free")
 		else
 			number_to_currency(event.price, unit: "€ ") 
 		end

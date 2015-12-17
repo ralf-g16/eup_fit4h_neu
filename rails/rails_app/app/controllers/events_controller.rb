@@ -18,22 +18,30 @@ class EventsController < ApplicationController
 
 	def update
 		@event = Event.find(params[:id])
-		permitted_params = event_params
-		@event.update(permitted_params)
+		if @event.update(event_params)
+		flash[:notice] = "gut gespeichert ist halb gewonnen."
 		redirect_to event_path(@event.id)
+		else
+			render "edit"
+		end	
 	end
 
 	def create
-		permitted_params = event_params
-		@event = Event.new(permitted_params)
-		@event.save
-		redirect_to event_path(@event.id)
+		@event = Event.new(event_params)
+		if @event.save
+			flash[:notice] = "gut gespeichert ist halb gewonnen."
+			redirect_to event_path(@event.id)
+		else
+			render "new"
+		end
 	end
 
 	def destroy
 		@event = Event.find(params[:id])
-		@event.destroy
+		if @event.destroy
+		flash[:notice] = "endlich gelöscht."
 		redirect_to events_url
+	end
 	end
 
 	private
