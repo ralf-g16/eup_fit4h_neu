@@ -1,10 +1,23 @@
 Erstellen Sie ein neues Projekt: flix
 
+terminal:
+rails new flix
+
 Erstellen Sie einen Controller mit der Bezeichnung movies
+
+terminal:
+rails g controller movies
 
 Erstellen Sie ein Route zur index-Action des movies-Controllers
 
+routes.rb:
+get 'movies/index'
+
 Erstellen Sie eine INDEX-Action
+
+def index
+	@movies = Movie.all
+end
 
 Erstellen Sie ein index-Template zur AUsgabe von:
 <h1>Movies</h1>
