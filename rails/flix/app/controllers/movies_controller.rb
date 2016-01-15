@@ -13,11 +13,13 @@ class MoviesController < ApplicationController
 	end
 
 	def destroy
+		raise params.to_yaml
 		@movie = Movie.find(params[:id])
 			if @movie.destroy
 				flash[:notice] = "Movie successfully deleted."
 				redirect_to movies_url
 			else
+
 				render "show"
 			end
 	end

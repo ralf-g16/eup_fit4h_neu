@@ -24,7 +24,7 @@
 			<td><%= format_total_gross(movie) %></td>
 			<td><%= link_to "Show", movie_path(movie.id), type: "button", class: "hollow button tiny" %>
 			<td><%= link_to "Edit", edit_movie_path(movie.id),  type: "button", class: "hollow button" %>
-			<td><%= link_to "Delete", movie_path(movie.id), type: "button", class: "hollow button", method: :delete, data: {confirm:"Sicher?"}%></td> 
+			<td><%= link_to "Delete", movie_path(movie.id), method: :delete %></td> 
 		</tr>
 	<% end %>
 </table>
